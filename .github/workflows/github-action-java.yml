@@ -15,8 +15,8 @@ ENV PATH /opt/jruby/bin:$PATH
 # skip installing gem documentation
 RUN mkdir -p /opt/jruby/etc \
   && { \
-echo 'install: --no-document'; \
-echo 'update: --no-document'; \
+  echo 'install: --no-document'; \
+  echo 'update: --no-document'; \
 	} >> /opt/jruby/etc/gemrc
 
 RUN gem install bundler rake net-telnet xmlrpc
